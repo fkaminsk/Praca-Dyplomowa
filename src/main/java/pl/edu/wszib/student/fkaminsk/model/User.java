@@ -30,7 +30,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="kart_id")
+    @JoinColumn(name = "kartId")
     public Kart kart;
 
 

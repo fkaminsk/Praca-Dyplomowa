@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb250697-69a9-43c2-b70b-7c39cc052c8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/configuration/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/controller/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/enm/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Kart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/configuration/AppConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/controller/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/enm/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/Kart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Kart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Kart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,19 @@
       <option name="presentableId" value="Default" />
       <updated>1587383461719</updated>
     </task>
+    <task id="LOCAL-00001" summary="user service">
+      <created>1587482801686</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587482801686</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="user service" />
+    <option name="LAST_COMMIT_MESSAGE" value="user service" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2352" y="163" key="#Notifications" timestamp="1587389539867">
@@ -107,29 +120,33 @@
     </state>
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587395681009" />
     <state x="2589" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587481995628" />
-    <state x="2275" y="99" key="CommitChangelistDialog2" timestamp="1587482771465">
+    <state x="2275" y="99" key="CommitChangelistDialog2" timestamp="1587482801056">
       <screen x="1920" y="0" width="1680" height="1010" />
     </state>
-    <state x="2275" y="99" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587482771465" />
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1587482771501">
+    <state x="2275" y="99" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587482801056" />
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom" timestamp="1587557629985">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587557629985" />
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587551893968" />
+    <state width="1877" height="272" key="GridCell.Tab.0.center" timestamp="1587557629985">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="272" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587557629985" />
+    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587551893968" />
+    <state width="1877" height="272" key="GridCell.Tab.0.left" timestamp="1587557629985">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="272" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587557629985" />
+    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587551893968" />
+    <state width="1877" height="272" key="GridCell.Tab.0.right" timestamp="1587557629985">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="272" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587557629985" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587551893968" />
+    <state x="2456" y="328" key="com.intellij.ide.util.TipDialog" timestamp="1587549352866">
       <screen x="1920" y="0" width="1680" height="1010" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587396032194" />
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587482771501" />
-    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1587482771500">
-      <screen x="1920" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587396032194" />
-    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587482771500" />
-    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1587482771500">
-      <screen x="1920" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587396032194" />
-    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587482771500" />
-    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1587482771501">
-      <screen x="1920" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587396032194" />
-    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587482771501" />
+    <state x="2456" y="328" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587549352866" />
   </component>
 </project>

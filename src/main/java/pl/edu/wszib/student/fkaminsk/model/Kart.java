@@ -19,9 +19,12 @@ public class Kart {
 
     @Id
     @GeneratedValue
-    @Column(name="kart_id")
     private int kartId;
-    @ElementCollection(targetClass = Product.class)
+    @OneToOne(mappedBy = "", cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY, optional = false)
+    private User user;
+    @OneToMany
+    @JoinColumn(name = "productId")
     private List<Product> inKart;
 
     public void addProduct(Product product){

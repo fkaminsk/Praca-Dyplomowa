@@ -5,29 +5,31 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Data
 @Entity
-@Table(name="t_karts")
+@Table(name = "t_karts")
 public class Kart {
 
-    public Kart(){
-        this.inKart = new ArrayList<>();
+    public Kart() {
+        this.products = new HashSet<>();
     }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int kartId;
-    @OneToOne(mappedBy = "", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY, optional = false)
+    @OneToOne(mappedBy = "kart")
+    @JoinColumn(name = "userId")
     private User user;
-    @OneToMany
-    @JoinColumn(name = "productId")
-    private List<Product> inKart;
+    @OneToMany(mappedBy = "kart")
+    private Set<Product> products;
 
-    public void addProduct(Product product){
-        this.inKart.add(product);
+
+    public void addProduct(Product product) {
+        this.products.add(product);
     }
 }

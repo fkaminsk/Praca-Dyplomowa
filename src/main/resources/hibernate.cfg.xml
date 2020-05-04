@@ -18,11 +18,13 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <!-- database intialize -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!-- mappings-->
         <mapping class="pl.edu.wszib.student.fkaminsk.model.User"/>
-        <mapping class="pl.edu.wszib.student.fkaminsk.model.Kart"/>
+        <mapping class="pl.edu.wszib.student.fkaminsk.model.Order"/>
+        <mapping class="pl.edu.wszib.student.fkaminsk.model.OrderDetails"/>
         <mapping class="pl.edu.wszib.student.fkaminsk.model.Product"/>
+        <mapping class="pl.edu.wszib.student.fkaminsk.model.Supplier"/>
     </session-factory>
 </hibernate-configuration>

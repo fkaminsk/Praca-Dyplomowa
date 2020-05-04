@@ -2,32 +2,28 @@ package pl.edu.wszib.student.fkaminsk.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pl.edu.wszib.student.fkaminsk.enm.Category;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
+@Table(name="t_products")
 @Entity
 public class Product {
 
-    public Product(String name, int supplierId, int categoryId, float price) {
-        this.name = name;
-        this.supplierId = supplierId;
-        this.categoryId = categoryId;
-        this.price = price;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
-
-    @ManyToOne
-    @JoinColumn(name = "kartId")
-    private Kart kart;
-
     private String name;
+    @Enumerated(EnumType.STRING)
+    private Category categoryName;
     private int supplierId;
-    private int categoryId;
+    private int inStock;
     private float price;
+
+
 
 }

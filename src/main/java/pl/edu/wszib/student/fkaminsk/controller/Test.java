@@ -1,5 +1,6 @@
 package pl.edu.wszib.student.fkaminsk.controller;
 
+import lombok.AllArgsConstructor;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,10 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import pl.edu.wszib.student.fkaminsk.enm.Role;
-import pl.edu.wszib.student.fkaminsk.model.Kart;
-import pl.edu.wszib.student.fkaminsk.model.Product;
 import pl.edu.wszib.student.fkaminsk.model.User;
 
+@AllArgsConstructor
 @Controller
 public class Test {
 
@@ -21,23 +21,21 @@ public class Test {
 
     @GetMapping(value = "/user")
     public String test() {
+
+
+
+
         Session session = this.session.openSession();
-
-        User user = new User("filip", "filip", "kamyk@email.co", Role.ADMIN);
-        //Product product4 = new Product("p4", 1, 1, 1);
-
-        Product product2 = new Product("p2", 1, 1, 1);
-        Product product3 = new Product("p1", 1, 1, 1);
-
-        user.kart.addProduct(product2);
-        user.kart.addProduct(product3);
         Transaction tx = null;
 
         try {
-
             tx = session.beginTransaction();
-
-            session.save(user);
+            session.save(User.builder()
+                    .login("fkaminsk")
+                    .password("fifi")
+                    .email("fkaminsk@sm.pl")
+                    .role(Role.ADMIN)
+                    .build());
             tx.commit();
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
@@ -49,11 +47,11 @@ public class Test {
         return "test";
     }
 
-    @GetMapping(value = "/kart")
+    @GetMapping(value = "/order")
     public String test2() {
         Session session = this.session.openSession();
 
-        Kart kart = new Kart();
+
 
 
         Transaction tx = null;
@@ -61,7 +59,7 @@ public class Test {
         try {
 
             tx = session.beginTransaction();
-            session.save(kart);
+
             tx.commit();
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();

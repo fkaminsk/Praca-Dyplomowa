@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import pl.edu.wszib.student.fkaminsk.enm.Role;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;

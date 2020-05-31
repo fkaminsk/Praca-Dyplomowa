@@ -3,14 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="cb250697-69a9-43c2-b70b-7c39cc052c8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/controller/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/controller/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/data/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/data/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/data/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/data/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/data/SupplierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/data/SupplierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/data/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/data/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/enm/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/enm/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/enm/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/enm/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/OrderDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/OrderDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/controller/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/controller/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/Kart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/service/ITestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/service/ITestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/service/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/service/TestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/configuration/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/controller/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/enm/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/enm/Role.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/User.class" afterDir="false" />
     </list>
@@ -23,8 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -147,67 +160,75 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588357475729" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588357534240">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589635882914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588357534240" />
-    <state x="406" y="102" key="CommitChangelistDialog2" timestamp="1588575116386">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589635882914" />
+    <state x="406" y="102" key="CommitChangelistDialog2" timestamp="1590923155876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="406" y="102" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588575116386" />
+    <state x="406" y="102" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1590923155876" />
     <state x="2275" y="99" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587482801056" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1587569348393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587569348393" />
-    <state width="1877" height="272" key="GridCell.Tab.0.bottom" timestamp="1588606066409">
+    <state width="1877" height="40" key="GridCell.Tab.0.bottom" timestamp="1589739610031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588606066409" />
+    <state width="1877" height="40" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589739610031" />
     <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587551893968" />
-    <state width="1877" height="272" key="GridCell.Tab.0.center" timestamp="1588606066409">
+    <state width="1877" height="40" key="GridCell.Tab.0.center" timestamp="1589739610030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="272" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588606066409" />
+    <state width="1877" height="40" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589739610030" />
     <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587551893968" />
-    <state width="1877" height="272" key="GridCell.Tab.0.left" timestamp="1588606066408">
+    <state width="1877" height="40" key="GridCell.Tab.0.left" timestamp="1589739610029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="272" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588606066408" />
+    <state width="1877" height="40" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589739610029" />
     <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587551893968" />
-    <state width="1877" height="272" key="GridCell.Tab.0.right" timestamp="1588606066409">
+    <state width="1877" height="40" key="GridCell.Tab.0.right" timestamp="1589739610031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="272" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588606066409" />
+    <state width="1877" height="40" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589739610031" />
     <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587551893968" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1588602481002">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589647572029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588602481002" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1588602481002">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589647572029" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1589647572028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588602481002" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1588602481002">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589647572028" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1589647572028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588602481002" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1588602481002">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589647572028" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1589647572029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588602481002" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589647572029" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1587564751452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1587564751452" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1588575127980">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1590923160665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588575127980" />
-    <state x="613" y="338" key="com.intellij.ide.util.TipDialog" timestamp="1588569079459">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1590923160665" />
+    <state x="613" y="338" key="com.intellij.ide.util.TipDialog" timestamp="1590921681045">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="613" y="338" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1588569079459" />
+    <state x="613" y="338" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1590921681045" />
     <state x="2456" y="328" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587549352866" />
+    <state x="702" y="138" key="refactoring.ChangeSignatureDialog" timestamp="1589707771146">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="138" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589707771146" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589708600410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1589708600410" />
   </component>
 </project>

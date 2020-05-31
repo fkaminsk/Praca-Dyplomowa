@@ -1,4 +1,9 @@
 package pl.edu.wszib.student.fkaminsk.data;
 
-public interface ProductRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import pl.edu.wszib.student.fkaminsk.model.Product;
+
+@Repository
+public interface ProductRepository extends CrudRepository<Product,Integer> {
 }

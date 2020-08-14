@@ -56,7 +56,7 @@ public class TestService {
     public void getAllUsers() {
         Iterable<User> result = userRepository.findAll();
         for (User user : result) {
-            System.out.println(user.getLogin() + " " + user.getRole());
+            System.out.println(user.getLogin() + " " + user.getRole() + " " + user.getPassword());
         }
     }
 }

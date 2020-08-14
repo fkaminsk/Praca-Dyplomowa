@@ -18,18 +18,15 @@ public class UserController {
     public String displayUsers(){
 
         userRepository.save(User.builder()
-                .login("fifi2")
+                .login("fifi10")
                 .password("1234")
-                .email("fmkaminski2@gmail.com")
+                .email("fmkaminski10@gmail.com")
                 .build());
 
         for (User user:userRepository.findAll()) {
             System.out.println(user);
         }
 
-        return "redirect:";
+        return "test";
     }
-
-
-
 }

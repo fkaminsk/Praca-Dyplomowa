@@ -1,6 +1,8 @@
 package pl.edu.wszib.student.fkaminsk.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,12 +14,20 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
 @Table(name = "t_users")
 public class User {
+
+    public User(int userId, String login, String password, String email, Role role, Collection<Order> orders) {
+        this.userId = userId;
+        this.login = login;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+        this.orders = orders;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +37,7 @@ public class User {
     private String email;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
+    @JsonBackReference
     private Collection<Order> orders = new ArrayList();
 }

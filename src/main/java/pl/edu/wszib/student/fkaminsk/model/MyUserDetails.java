@@ -1,19 +1,16 @@
 package pl.edu.wszib.student.fkaminsk.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import pl.edu.wszib.student.fkaminsk.data.UserRepository;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class MyUserDetails implements org.springframework.security.core.userdetails.UserDetails{
+public class MyUserDetails implements UserDetails {
 
-    private String login;
-    private String password;
+    private final String login;
+    private final String password;
     List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
 
     public MyUserDetails(User user) {

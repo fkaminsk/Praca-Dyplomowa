@@ -12,6 +12,7 @@ import pl.edu.wszib.student.fkaminsk.enm.Role;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Builder
 @NoArgsConstructor
@@ -20,13 +21,20 @@ import java.util.Collection;
 @Table(name = "t_users")
 public class User {
 
-    public User(int userId, String login, String password, String email, Role role, Collection<Order> orders) {
+    public User(int userId, String login, String password, String email, Role role, List<Order> orders) {
         this.userId = userId;
         this.login = login;
         this.password = password;
         this.email = email;
         this.role = role;
         this.orders = orders;
+    }
+
+    public User(int userId, String login, String password, String email) {
+        this.userId = userId;
+        this.login = login;
+        this.password = password;
+        this.email = email;
     }
 
     @Id
@@ -39,5 +47,5 @@ public class User {
     private Role role;
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
     @JsonBackReference
-    private Collection<Order> orders = new ArrayList();
+    private List<Order> orders = new ArrayList<>();
 }

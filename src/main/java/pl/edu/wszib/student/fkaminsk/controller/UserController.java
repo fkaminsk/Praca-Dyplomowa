@@ -1,32 +1,26 @@
 package pl.edu.wszib.student.fkaminsk.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import pl.edu.wszib.student.fkaminsk.data.UserRepository;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import pl.edu.wszib.student.fkaminsk.model.User;
+import pl.edu.wszib.student.fkaminsk.service.UserService;
+import pl.edu.wszib.student.fkaminsk.validator.ValidationResult;
 
 @Controller
-@RequestMapping("users")
 public class UserController {
 
-    @Autowired
-    private UserRepository userRepository;
+    UserService userService;
 
-    @GetMapping("addUser")
-    public String displayUsers(){
+    @GetMapping("/")
+    public String home() {
+        return "login";
+    }
 
-        userRepository.save(User.builder()
-                .login("fifi10")
-                .password("1234")
-                .email("fmkaminski10@gmail.com")
-                .build());
-
-        for (User user:userRepository.findAll()) {
-            System.out.println(user);
-        }
-
-        return "test";
+    @PostMapping("/register")
+    public ResponseEntity<ValidationResult> register(@RequestBody User user) {
+        return ResponseEntity.ok(userService.register(user));
     }
 }

@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb250697-69a9-43c2-b70b-7c39cc052c8b" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/configuration/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/edu/wszib/student/fkaminsk/model/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +25,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1anu1CqyLnMHWHlFIfagQ8bHGhB" />
   <component name="ProjectLevelVcsManager">
@@ -120,7 +121,7 @@
       <workItem from="1602411385930" duration="9720000" />
       <workItem from="1603019111619" duration="368000" />
       <workItem from="1603528491461" duration="13741000" />
-      <workItem from="1618060786237" duration="6518000" />
+      <workItem from="1618060786237" duration="9793000" />
     </task>
     <task id="LOCAL-00001" summary="user service">
       <created>1587482801686</created>
@@ -157,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590923214846</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: register initially works">
+      <created>1618068098998</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618068098998</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,17 +188,7 @@
     <MESSAGE value="user service 2" />
     <MESSAGE value="user service 3 -db seems working" />
     <MESSAGE value="ready for endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="ready for endpoints" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/edu/wszib/student/fkaminsk/controller/UserController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="feat: register initially works" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: register initially works" />
   </component>
 </project>

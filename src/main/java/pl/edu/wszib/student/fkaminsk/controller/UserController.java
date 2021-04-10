@@ -7,6 +7,8 @@ import pl.edu.wszib.student.fkaminsk.model.User;
 import pl.edu.wszib.student.fkaminsk.service.UserService;
 import pl.edu.wszib.student.fkaminsk.validator.ValidationResult;
 
+import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
 import java.util.List;
 
 @RestController

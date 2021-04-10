@@ -37,6 +37,13 @@ public class User {
         this.email = email;
     }
 
+    public User(String login, String password, String email, Role role) {
+        this.login = login;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;

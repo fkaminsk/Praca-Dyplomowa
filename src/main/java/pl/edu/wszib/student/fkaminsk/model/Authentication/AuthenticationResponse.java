@@ -1,4 +1,4 @@
-package pl.edu.wszib.student.fkaminsk.model;
+package pl.edu.wszib.student.fkaminsk.model.Authentication;
 
 import lombok.Data;
 

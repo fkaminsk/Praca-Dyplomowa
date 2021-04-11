@@ -15,10 +15,10 @@ import pl.edu.wszib.student.fkaminsk.service.impl.UserDetailsServiceImpl;
 import pl.edu.wszib.student.fkaminsk.util.JwtUtil;
 import pl.edu.wszib.student.fkaminsk.validator.ValidationResult;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 public class UserController {
 
     @Autowired
@@ -59,12 +59,11 @@ public class UserController {
             throw new Exception("Incorrect username or password", e);
         }
 
-
         final UserDetails userDetails = userDetailsService
                 .loadUserByUsername(authenticationRequest.getLogin());
-
         final String jwt = jwtTokenUtil.generateToken(userDetails);
+        final Date expiresAt = jwtTokenUtil.extractExpiration(jwt);
 
-        return ResponseEntity.ok(new AuthenticationResponse(jwt));
+        return ResponseEntity.ok(new AuthenticationResponse(jwt, expiresAt));
     }
 }

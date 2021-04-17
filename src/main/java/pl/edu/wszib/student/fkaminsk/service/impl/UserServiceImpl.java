@@ -9,15 +9,13 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.edu.wszib.student.fkaminsk.data.UserRepository;
 import pl.edu.wszib.student.fkaminsk.model.User;
 import pl.edu.wszib.student.fkaminsk.service.UserService;
 import pl.edu.wszib.student.fkaminsk.validator.ValidationResult;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 import java.util.stream.StreamSupport;
 
 @Service
@@ -46,8 +44,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getUsers() {
-        return StreamSupport.stream(userRepository.findAll().spliterator(), false).collect(Collectors.toList());
+    public Iterable<User> getUsers() {
+        return userRepository.findAll();
+    }
+
+    @Override
+    public Optional<User> getUserById(int id) {
+        return userRepository.findByUserId(id);
     }
 
     @Override

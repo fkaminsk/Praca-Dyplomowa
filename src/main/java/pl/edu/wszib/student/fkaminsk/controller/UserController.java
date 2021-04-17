@@ -1,5 +1,6 @@
 package pl.edu.wszib.student.fkaminsk.controller;
 
+import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,8 +18,10 @@ import pl.edu.wszib.student.fkaminsk.validator.ValidationResult;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
+@CrossOrigin
 public class UserController {
 
     @Autowired
@@ -38,8 +41,13 @@ public class UserController {
         return "login";
     }
 
+    @GetMapping("/{id}/user")
+    public Optional<User> getUserById(@PathVariable int id) {
+        return userService.getUserById(id);
+    }
+
     @GetMapping("/users")
-    public List<User> getUsers() {
+    public Iterable<User> getUsers() {
         return userService.getUsers();
     }
 
@@ -55,7 +63,7 @@ public class UserController {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authenticationRequest.getLogin(), authenticationRequest.getPassword())
             );
-        } catch (BadCredentialsException e) {
+        } catch (BadCredentialsException e){
             throw new Exception("Incorrect username or password", e);
         }
 

@@ -2,6 +2,7 @@ package pl.edu.wszib.student.fkaminsk.controller;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -44,6 +45,11 @@ public class UserController {
     @GetMapping("/{id}/user")
     public Optional<User> getUserById(@PathVariable int id) {
         return userService.getUserById(id);
+    }
+
+    @GetMapping("/user")
+    public ResponseEntity<Optional<User>> getAuthorizedUser(@RequestHeader("Authorization") String authorizationHeader) {
+        return ResponseEntity.ok(userService.getUserFromToken(authorizationHeader));
     }
 
     @GetMapping("/users")

@@ -9,5 +9,6 @@ public interface UserService {
         ValidationResult register(User user);
         Iterable<User> getUsers();
         Optional<User> getUserById(int id);
+        Optional<User> getUserFromToken(String token);
         Boolean login(String login, String password);
 }

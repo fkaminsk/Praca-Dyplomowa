@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import pl.edu.wszib.student.fkaminsk.data.UserRepository;
 import pl.edu.wszib.student.fkaminsk.model.User;
 import pl.edu.wszib.student.fkaminsk.service.UserService;
+import pl.edu.wszib.student.fkaminsk.util.JwtUtil;
 import pl.edu.wszib.student.fkaminsk.validator.ValidationResult;
 
 import java.util.Optional;
@@ -23,6 +24,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private JwtUtil jwtUtil;
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -54,16 +58,23 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Optional<User> getUserFromToken(String authorizationHeader) {
+        String jwt = authorizationHeader.substring(7);
+        String login = jwtUtil.extractUsername(jwt);
+        System.out.println(login);
+        return userRepository.findByLogin(login);
+    }
+
+    @Override
     public ValidationResult register(User user) {
         ValidationResult result = validate(user);
         if (result.isLogin() && result.isEmail()) {
             userRepository.save(user);
             logger.debug(String.format("User %s registered", user.getLogin()));
-            return result;
         } else {
             logger.debug(String.format("User %s not registered due to existing credentials", user.getLogin()));
-            return result;
         }
+        return result;
     }
 
     @Override

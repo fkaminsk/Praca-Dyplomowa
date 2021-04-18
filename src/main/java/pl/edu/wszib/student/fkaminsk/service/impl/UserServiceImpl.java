@@ -37,6 +37,7 @@ public class UserServiceImpl implements UserService {
         return new ValidationResult(user, validateLogin(user), validateEmail(user));
     }
 
+    //alternate way to fetch from iterable with stream support
     private boolean validateLogin(User user) {
         return StreamSupport.stream(userRepository.findAll().spliterator(), false)
                 .noneMatch(u -> u.getLogin().equals(user.getLogin()));

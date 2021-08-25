@@ -1,8 +1,6 @@
 package pl.edu.wszib.student.fkaminsk.controller;
 
-import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -18,7 +16,6 @@ import pl.edu.wszib.student.fkaminsk.util.JwtUtil;
 import pl.edu.wszib.student.fkaminsk.validator.ValidationResult;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -37,10 +34,6 @@ public class UserController {
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
-    @GetMapping("/")
-    public String home() {
-        return "login";
-    }
 
     @GetMapping("/{id}/user")
     public Optional<User> getUserById(@PathVariable int id) {
@@ -64,7 +57,6 @@ public class UserController {
 
     @PostMapping("/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
-
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authenticationRequest.getLogin(), authenticationRequest.getPassword())

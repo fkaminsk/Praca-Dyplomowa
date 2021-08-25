@@ -1,6 +1,7 @@
 package pl.edu.wszib.student.fkaminsk.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
@@ -28,11 +29,13 @@ public class Product {
     private String name;
     @Enumerated(EnumType.STRING)
     private Category categoryName;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "supplierId", nullable = false)
     private Supplier supplier;
     private int inStock;
     private float price;
+    @JsonIgnore
     @ManyToMany(mappedBy = "productList")
     private List<Order> orderList = new ArrayList<>();
 

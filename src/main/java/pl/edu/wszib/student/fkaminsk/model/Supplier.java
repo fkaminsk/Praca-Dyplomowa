@@ -22,10 +22,9 @@ public class Supplier {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int supplierId;
+    @JsonBackReference
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "supplier")
     private Collection<Product> products = new ArrayList<>();
     private String companyName;
     private String country;
-
-
 }

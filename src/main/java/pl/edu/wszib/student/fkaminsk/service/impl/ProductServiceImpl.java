@@ -3,15 +3,12 @@ package pl.edu.wszib.student.fkaminsk.service.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import pl.edu.wszib.student.fkaminsk.data.ProductRepository;
+import pl.edu.wszib.student.fkaminsk.data.SupplierRepository;
 import pl.edu.wszib.student.fkaminsk.model.Product;
+import pl.edu.wszib.student.fkaminsk.model.Supplier;
 import pl.edu.wszib.student.fkaminsk.service.ProductService;
 
 import java.io.ByteArrayOutputStream;
@@ -31,11 +28,14 @@ public class ProductServiceImpl implements ProductService {
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
     @Autowired
-    private ProductRepository repository;
+    private ProductRepository productRepository;
+
+    @Autowired
+    private SupplierRepository suppliersRepository;
 
     @Override
     public Iterable<Product> getProducts() {
-        Iterable<Product> dbProducts = repository.findAll();
+        Iterable<Product> dbProducts = productRepository.findAll();
         List<Product> productList = StreamSupport.stream(dbProducts.spliterator(), false).collect(Collectors.toList());
         productList.forEach(product -> {
             if (product.getImage() != null) {
@@ -48,7 +48,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Optional<Product> getProductById(int id) {
         log.info("Fetching product with id: " + id);
-        Optional<Product> dbProduct = repository.findById(id);
+        Optional<Product> dbProduct = productRepository.findById(id);
         if (dbProduct.isEmpty()) {
             throw new NoSuchElementException();
         }
@@ -60,10 +60,27 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void addNewProduct(Product product) {
+    public void addNewProduct(Product product, MultipartFile image) {
+        if (image == null) {
+            try {
+                productRepository.save(product);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                product.setImage(compressBytes(image.getBytes()));
+                productRepository.save(product);
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
+        }
+    }
+
+    @Override
+    public void deleteProductById(int id) {
         try {
-            log.info("Adding new product: " + product.getName());
-            repository.save(product);
+            productRepository.deleteById(id);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -71,7 +88,7 @@ public class ProductServiceImpl implements ProductService {
 
 
     public void updateProductImage(MultipartFile image, int productId) {
-        Optional<Product> dbProduct = repository.findById(productId);
+        Optional<Product> dbProduct = productRepository.findById(productId);
         if (dbProduct.isEmpty()) {
             throw new NoSuchElementException();
         }
@@ -81,7 +98,7 @@ public class ProductServiceImpl implements ProductService {
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
-        repository.save(updatedProduct);
+        productRepository.save(updatedProduct);
     }
 
     @Override
@@ -97,6 +114,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void removeProduct(int id) {
 
+    }
+
+    @Override
+    public Iterable<Supplier> getSuppliers() {
+        return suppliersRepository.findAll();
     }
 
     public static byte[] compressBytes(byte[] data) {

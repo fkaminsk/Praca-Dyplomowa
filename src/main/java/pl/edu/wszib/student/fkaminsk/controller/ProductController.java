@@ -1,11 +1,14 @@
 package pl.edu.wszib.student.fkaminsk.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import pl.edu.wszib.student.fkaminsk.model.Product;
+import pl.edu.wszib.student.fkaminsk.model.Supplier;
 import pl.edu.wszib.student.fkaminsk.service.ProductService;
 
+import java.awt.*;
 import java.util.Optional;
 
 @RestController
@@ -25,13 +28,23 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
-    @PostMapping("/addProduct")
-    public void addNewProduct(@RequestBody Product product) {
-        productService.addNewProduct(product);
+    @PostMapping(value = "/product", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public void addNewProduct(@RequestPart("product") Product product, @RequestPart("image") MultipartFile image) {
+        productService.addNewProduct(product, image);
     }
 
-    @PostMapping("/{id}/product/update")
+    @DeleteMapping("/{id}/product")
+    public void deleteProduct(@PathVariable int id) {
+        productService.deleteProductById(id);
+    }
+
+    @PatchMapping("/{id}/product")
     public void updateProduct(@RequestParam("image") MultipartFile image, @PathVariable int id) {
-        productService.updateProductImage(image,id);
+        productService.updateProductImage(image, id);
+    }
+
+    @GetMapping("/suppliers")
+    public Iterable<Supplier> getSuppliers() {
+        return productService.getSuppliers();
     }
 }

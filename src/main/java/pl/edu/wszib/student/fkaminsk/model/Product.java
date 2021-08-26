@@ -1,6 +1,8 @@
 package pl.edu.wszib.student.fkaminsk.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,7 +30,9 @@ public class Product {
     private String description;
     private byte[] image;
     @Enumerated(EnumType.STRING)
+    @JsonDeserialize
     private Category categoryName;
+    @JsonBackReference
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "supplierId", nullable = false)

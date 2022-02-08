@@ -8,7 +8,6 @@ import pl.edu.wszib.student.fkaminsk.model.Product;
 import pl.edu.wszib.student.fkaminsk.model.Supplier;
 import pl.edu.wszib.student.fkaminsk.service.ProductService;
 
-import java.awt.*;
 import java.util.Optional;
 
 @RestController
